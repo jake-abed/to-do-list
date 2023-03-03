@@ -1,0 +1,1 @@
+(()=>{"use strict";const e=document.querySelector("#content"),t=()=>console.log("Bird up!");(()=>{const n=document.createElement("button");n.addEventListener("click",t),n.setAttribute("value","Bird Up!"),n.innerText="Bird up!",e.append(n)})()})();
