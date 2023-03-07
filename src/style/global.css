@@ -1,0 +1,40 @@
+:root {
+    font-size: 10px;
+    --mint-cream: #f1fffaff;
+    --tea-green: #ccfccbff;
+    --celadon: #96e6b3ff;
+    --fern-green: #568259ff;
+    --outer-space: #464e47ff;
+    color: var(--outer-space);
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: var(--tea-green);
+}
+
+h1 {
+    font-size: 4em;
+    text-align: center;
+    margin: 0;
+}
+
+.app-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 8dvh;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    width: 100dvw;
+    border-top: 0.2rem solid var(--fern-green);
+}
+
+.app-bar > div {
+    flex: 0 1 20rem;
+    text-align: center;
+    font-size: 2.5em;
+}
