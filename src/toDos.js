@@ -36,3 +36,5 @@ const toDo = (uuid = crypto.randomUUID(), title, desc, dueDate, priority) => {
         changeTitle
     }
 }
+
+//function to map imported data

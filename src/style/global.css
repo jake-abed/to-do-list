@@ -14,6 +14,15 @@ html {
     background-color: var(--tea-green);
 }
 
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: var(--celadon);
+}
+
 h1 {
     font-size: 4em;
     text-align: center;
@@ -25,6 +34,7 @@ h1 {
     position: fixed;
     bottom: 0;
     left: 0;
+    background-color: var(--celadon);
     height: 8dvh;
     justify-content: center;
     gap: 2rem;
@@ -36,5 +46,5 @@ h1 {
 .app-bar > div {
     flex: 0 1 20rem;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2em;
 }

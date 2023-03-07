@@ -1,10 +1,10 @@
 'use strict';
 
-const CONTENT = document.querySelector('#content');
+import Check from './images/check-square.svg';
+import Settings from './images/settings.svg';
+import Table from './images/table.svg'
 
-const birdUp = () => {
-    return console.log('Bird up!');
-}
+const CONTENT = document.querySelector('#content');
 
 const createHeader = () => {
     const HEADER = document.createElement('header');
@@ -20,14 +20,21 @@ const createAppBar = () => {
     const PROJECTS = document.createElement('div');
     const ALL_TASKS = document.createElement('div');
     const SETTINGS = document.createElement('div');
+    const projectsIcon = new Image();
+    projectsIcon.src = Table;
+    const allTasksIcon = new Image();
+    allTasksIcon.src = Check;
+    const settingsIcon = new Image();
+    settingsIcon.src = Settings;
+
 
     APP_BAR.classList.add('app-bar');
     PROJECTS.classList.add('projects');
-    PROJECTS.innerText = 'Projects';
+    PROJECTS.appendChild(projectsIcon);
     ALL_TASKS.classList.add('all-tasks');
-    ALL_TASKS.innerText = 'All Tasks';
+    ALL_TASKS.appendChild(allTasksIcon);
     SETTINGS.classList.add('settings');
-    SETTINGS.innerText = 'Settings';
+    SETTINGS.appendChild(settingsIcon);
 
     APP_BAR.appendChild(PROJECTS);
     APP_BAR.appendChild(ALL_TASKS);

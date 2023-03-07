@@ -16,7 +16,7 @@
   \********************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \":root {\\n    font-size: 10px;\\n    --mint-cream: #f1fffaff;\\n    --tea-green: #ccfccbff;\\n    --celadon: #96e6b3ff;\\n    --fern-green: #568259ff;\\n    --outer-space: #464e47ff;\\n    color: var(--outer-space);\\n    margin: 0;\\n    padding: 0;\\n}\\n\\nhtml {\\n    background-color: var(--tea-green);\\n}\\n\\nh1 {\\n    font-size: 4em;\\n    text-align: center;\\n    margin: 0;\\n}\\n\\n.app-bar {\\n    display: flex;\\n    position: fixed;\\n    bottom: 0;\\n    left: 0;\\n    height: 8dvh;\\n    justify-content: center;\\n    gap: 2rem;\\n    align-items: center;\\n    width: 100dvw;\\n    border-top: 0.2rem solid var(--fern-green);\\n}\\n\\n.app-bar > div {\\n    flex: 0 1 20rem;\\n    text-align: center;\\n    font-size: 2.5em;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://to-do-list/./src/style/global.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \":root {\\n    font-size: 10px;\\n    --mint-cream: #f1fffaff;\\n    --tea-green: #ccfccbff;\\n    --celadon: #96e6b3ff;\\n    --fern-green: #568259ff;\\n    --outer-space: #464e47ff;\\n    color: var(--outer-space);\\n    margin: 0;\\n    padding: 0;\\n}\\n\\nhtml {\\n    background-color: var(--tea-green);\\n}\\n\\nbody {\\n    padding: 0;\\n    margin: 0;\\n}\\n\\nheader {\\n    background-color: var(--celadon);\\n}\\n\\nh1 {\\n    font-size: 4em;\\n    text-align: center;\\n    margin: 0;\\n}\\n\\n.app-bar {\\n    display: flex;\\n    position: fixed;\\n    bottom: 0;\\n    left: 0;\\n    background-color: var(--celadon);\\n    height: 8dvh;\\n    justify-content: center;\\n    gap: 2rem;\\n    align-items: center;\\n    width: 100dvw;\\n    border-top: 0.2rem solid var(--fern-green);\\n}\\n\\n.app-bar > div {\\n    flex: 0 1 20rem;\\n    text-align: center;\\n    font-size: 2em;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://to-do-list/./src/style/global.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createAppBar\": () => (/* binding */ createAppBar),\n/* harmony export */   \"createHeader\": () => (/* binding */ createHeader)\n/* harmony export */ });\n\n\nconst CONTENT = document.querySelector('#content');\n\nconst birdUp = () => {\n    return console.log('Bird up!');\n}\n\nconst createHeader = () => {\n    const HEADER = document.createElement('header');\n    const H1 = document.createElement('h1');\n\n    H1.innerText = 'Basilisk To-Do';\n    HEADER.appendChild(H1);\n    return CONTENT.appendChild(HEADER);\n}\n\nconst createAppBar = () => {\n    const APP_BAR = document.createElement('nav');\n    const PROJECTS = document.createElement('div');\n    const ALL_TASKS = document.createElement('div');\n    const SETTINGS = document.createElement('div');\n\n    APP_BAR.classList.add('app-bar');\n    PROJECTS.classList.add('projects');\n    PROJECTS.innerText = 'Projects';\n    ALL_TASKS.classList.add('all-tasks');\n    ALL_TASKS.innerText = 'All Tasks';\n    SETTINGS.classList.add('settings');\n    SETTINGS.innerText = 'Settings';\n\n    APP_BAR.appendChild(PROJECTS);\n    APP_BAR.appendChild(ALL_TASKS);\n    APP_BAR.appendChild(SETTINGS);\n\n    return CONTENT.appendChild(APP_BAR);\n}\n\n\n\n//# sourceURL=webpack://to-do-list/./src/domController.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createAppBar\": () => (/* binding */ createAppBar),\n/* harmony export */   \"createHeader\": () => (/* binding */ createHeader)\n/* harmony export */ });\n/* harmony import */ var _images_check_square_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./images/check-square.svg */ \"./src/images/check-square.svg\");\n/* harmony import */ var _images_settings_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./images/settings.svg */ \"./src/images/settings.svg\");\n/* harmony import */ var _images_table_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./images/table.svg */ \"./src/images/table.svg\");\n\n\n\n\n\n\nconst CONTENT = document.querySelector('#content');\n\nconst createHeader = () => {\n    const HEADER = document.createElement('header');\n    const H1 = document.createElement('h1');\n\n    H1.innerText = 'Basilisk To-Do';\n    HEADER.appendChild(H1);\n    return CONTENT.appendChild(HEADER);\n}\n\nconst createAppBar = () => {\n    const APP_BAR = document.createElement('nav');\n    const PROJECTS = document.createElement('div');\n    const ALL_TASKS = document.createElement('div');\n    const SETTINGS = document.createElement('div');\n    const projectsIcon = new Image();\n    projectsIcon.src = _images_table_svg__WEBPACK_IMPORTED_MODULE_2__;\n    const allTasksIcon = new Image();\n    allTasksIcon.src = _images_check_square_svg__WEBPACK_IMPORTED_MODULE_0__;\n    const settingsIcon = new Image();\n    settingsIcon.src = _images_settings_svg__WEBPACK_IMPORTED_MODULE_1__;\n\n\n    APP_BAR.classList.add('app-bar');\n    PROJECTS.classList.add('projects');\n    PROJECTS.appendChild(projectsIcon);\n    ALL_TASKS.classList.add('all-tasks');\n    ALL_TASKS.appendChild(allTasksIcon);\n    SETTINGS.classList.add('settings');\n    SETTINGS.appendChild(settingsIcon);\n\n    APP_BAR.appendChild(PROJECTS);\n    APP_BAR.appendChild(ALL_TASKS);\n    APP_BAR.appendChild(SETTINGS);\n\n    return CONTENT.appendChild(APP_BAR);\n}\n\n\n\n//# sourceURL=webpack://to-do-list/./src/domController.js?");
 
 /***/ }),
 
@@ -136,7 +136,37 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \**********************/
 /***/ (() => {
 
-eval("\n\n//Build To-Do Factory\n\nconst toDo = (uuid = crypto.randomUUID(), title, desc, dueDate, priority) => {\n\n    function setPriority(level) {\n        switch (level.toLowerCase()) {\n            case 'high':\n                this.priority = level.toLowerCase();\n                break;\n            case 'normal':\n                this.priority = level.toLowerCase();\n                break;\n            case 'low':\n                this.priority = level.toLowerCase();\n                break;\n            default:\n                console.error('Invalid priority level.');\n                break;\n        }\n        return console.log(`${this.title} priority is now ${this.priority}.`)\n    }\n\n    function changeTitle(newTitle) {\n        return this.title = newTitle;\n    }\n\n    return {\n        title,\n        desc,\n        dueDate,\n        priority,\n        setPriority,\n        setUUID,\n        changeTitle\n    }\n}\n\n\n//# sourceURL=webpack://to-do-list/./src/toDos.js?");
+eval("\n\n//Build To-Do Factory\n\nconst toDo = (uuid = crypto.randomUUID(), title, desc, dueDate, priority) => {\n\n    function setPriority(level) {\n        switch (level.toLowerCase()) {\n            case 'high':\n                this.priority = level.toLowerCase();\n                break;\n            case 'normal':\n                this.priority = level.toLowerCase();\n                break;\n            case 'low':\n                this.priority = level.toLowerCase();\n                break;\n            default:\n                console.error('Invalid priority level.');\n                break;\n        }\n        return console.log(`${this.title} priority is now ${this.priority}.`)\n    }\n\n    function changeTitle(newTitle) {\n        return this.title = newTitle;\n    }\n\n    return {\n        title,\n        desc,\n        dueDate,\n        priority,\n        setPriority,\n        setUUID,\n        changeTitle\n    }\n}\n\n//function to map imported data\n\n//# sourceURL=webpack://to-do-list/./src/toDos.js?");
+
+/***/ }),
+
+/***/ "./src/images/check-square.svg":
+/*!*************************************!*\
+  !*** ./src/images/check-square.svg ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"6ffba6b563ca941808da.svg\";\n\n//# sourceURL=webpack://to-do-list/./src/images/check-square.svg?");
+
+/***/ }),
+
+/***/ "./src/images/settings.svg":
+/*!*********************************!*\
+  !*** ./src/images/settings.svg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"8588567d7abe6a39f8ce.svg\";\n\n//# sourceURL=webpack://to-do-list/./src/images/settings.svg?");
+
+/***/ }),
+
+/***/ "./src/images/table.svg":
+/*!******************************!*\
+  !*** ./src/images/table.svg ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"7d17d6b6dd7841c39885.svg\";\n\n//# sourceURL=webpack://to-do-list/./src/images/table.svg?");
 
 /***/ })
 
@@ -191,6 +221,18 @@ eval("\n\n//Build To-Do Factory\n\nconst toDo = (uuid = crypto.randomUUID(), tit
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -205,6 +247,26 @@ eval("\n\n//Build To-Do Factory\n\nconst toDo = (uuid = crypto.randomUUID(), tit
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
