@@ -1,5 +1,7 @@
 'use strict';
 
 import * as DOM from './domController';
+import * as toDo from './toDos';
 
-DOM.createBirdUpButton();
+DOM.createHeader();
+DOM.createAppBar();
