@@ -43,7 +43,16 @@ const createAppBar = () => {
     return CONTENT.appendChild(APP_BAR);
 }
 
+const createMainContent = () => {
+    const SECTION = document.createElement('section');
+    
+    SECTION.classList.add('main-content');
+
+    return CONTENT.appendChild(SECTION);``
+}
+
 export {
     createHeader,
+    createMainContent,
     createAppBar
 }
