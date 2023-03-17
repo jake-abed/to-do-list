@@ -19,6 +19,7 @@
   "homepage": "https://github.com/jake-abed/to-do-list#readme",
   "devDependencies": {
     "css-loader": "^6.7.3",
+    "json-loader": "^0.5.7",
     "style-loader": "^3.3.1",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"

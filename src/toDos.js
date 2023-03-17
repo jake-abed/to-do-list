@@ -1,8 +1,10 @@
 'use strict';
 
+import { isJson } from './utils';
+
 //Build To-Do Factory
 
-const toDo = (title, desc, dueDate, priority, uuid = crypto.randomUUID()) => {
+const createToDo = (title, desc, dueDate, priority, uuid = crypto.randomUUID()) => {
 
     function setPriority(level) {
         switch (level.toLowerCase()) {
@@ -37,11 +39,12 @@ const toDo = (title, desc, dueDate, priority, uuid = crypto.randomUUID()) => {
     }
 }
 
-const testDo = toDo('Wash Dishes', 'Wash all the dishes in the sink.', '03/20/2023', 'high');
-
-//function to map imported data
-
 const importAllToDos = (toDoJsonFile) => {
-    const ingestedToDos = JSON.parse(toDoJsonFile);
-    return ingestedToDos.map((toDo) => toDo(toDo.title, toDo.desc, toDo.dueDate,toDo.priority, toDo.uuid));
+    const ingestedToDos = isJson(toDoJsonFile) ?
+        JSON.parse(toDoJsonFile) : toDoJsonFile;
+    return ingestedToDos.map((toDo) => createToDo(toDo.title, toDo.desc, toDo.dueDate,toDo.priority, toDo.uuid));
+}
+
+export {
+    importAllToDos
 }
