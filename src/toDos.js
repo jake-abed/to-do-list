@@ -2,7 +2,7 @@
 
 //Build To-Do Factory
 
-const toDo = (uuid = crypto.randomUUID(), title, desc, dueDate, priority) => {
+const toDo = (title, desc, dueDate, priority, uuid = crypto.randomUUID()) => {
 
     function setPriority(level) {
         switch (level.toLowerCase()) {
@@ -27,14 +27,21 @@ const toDo = (uuid = crypto.randomUUID(), title, desc, dueDate, priority) => {
     }
 
     return {
+        uuid,
         title,
         desc,
         dueDate,
         priority,
         setPriority,
-        setUUID,
         changeTitle
     }
 }
 
+const testDo = toDo('Wash Dishes', 'Wash all the dishes in the sink.', '03/20/2023', 'high');
+
 //function to map imported data
+
+const importAllToDos = (toDoJsonFile) => {
+    const ingestedToDos = JSON.parse(toDoJsonFile);
+    return ingestedToDos.map((toDo) => toDo(toDo.title, toDo.desc, toDo.dueDate,toDo.priority, toDo.uuid));
+}
