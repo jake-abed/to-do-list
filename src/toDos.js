@@ -45,6 +45,15 @@ const importAllToDos = (toDoJsonFile) => {
     return ingestedToDos.map((toDo) => createToDo(toDo.title, toDo.desc, toDo.dueDate,toDo.priority, toDo.uuid));
 }
 
+const generateToDoMap = (toDoList, mapKey) => {
+    const toDoMap = new Map();
+    for (const toDo of toDoList) {
+        toDoMap.set(toDo[mapKey], toDo);
+    }
+    return toDoMap;
+}
+
 export {
-    importAllToDos
+    importAllToDos,
+    generateToDoMap
 }
