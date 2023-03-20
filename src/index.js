@@ -16,3 +16,5 @@ console.log(toDoMap.get(toDoData[0].uuid));
 DOM.createHeader();
 DOM.createMainContent();
 DOM.createAppBar();
+DOM.createToDo(allToDos[0], document.querySelector('section'));
+DOM.createToDo(allToDos[1], document.querySelector('section'));

@@ -51,8 +51,31 @@ const createMainContent = () => {
     return CONTENT.appendChild(SECTION);``
 }
 
+const createToDo = (toDo, targetContainer) => {
+    const toDoWrapper = document.createElement('div');
+    const title = document.createElement('p');
+    const description = document.createElement('p');
+    const dueDate = document.createElement('p');
+    const priority = document.createElement('div');
+
+    toDoWrapper.classList.add('to-do');
+    toDoWrapper.setAttribute('id', toDo.uuid);
+    title.innerText = toDo.title;
+    description.innerText = toDo.desc;
+    dueDate.innerText = toDo.dueDate;
+    priority.innerText = toDo.priority
+
+    toDoWrapper.appendChild(title);
+    toDoWrapper.appendChild(description);
+    toDoWrapper.appendChild(dueDate);
+    toDoWrapper.appendChild(priority);
+
+    return targetContainer.appendChild(toDoWrapper);
+}
+
 export {
     createHeader,
     createMainContent,
-    createAppBar
+    createAppBar,
+    createToDo
 }
