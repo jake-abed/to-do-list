@@ -4,6 +4,7 @@
         "desc": "Wash all the dishes in the sink.",
         "dueDate": "03/20/2023",
         "priority": "high",
+        "completed": false,
         "uuid": "e07fca40-9a47-4dd1-b696-f26c8917640c"
     },
     {
@@ -11,6 +12,7 @@
         "desc": "Repeatedly say \"Sheeeeeeesh!\" in Valorant anytime someone makes a sick play.",
         "dueDate": "04/01/2023",
         "priority": "low",
+        "completed": false,
         "uuid": "b3f7ba35-04ee-4e46-a32e-d6e0fb062b1c"
     },
     {
@@ -18,6 +20,7 @@
         "desc": "Repeatedly say \"Jeeeeeeeeeesh!\" in Valorant anytime someone makes an awful play.",
         "dueDate": "04/20/2023",
         "priority": "low",
+        "completed": false,
         "uuid": "fe8b2fef-d559-4a1b-a80a-0839ec6c6414"
     },
     {
@@ -25,6 +28,7 @@
         "desc": "Work on writing a high-concept sci-fi novel about a violent, dystopian society of futuristic goat men.",
         "dueDate": "12/15/2024",
         "priority": "normal",
+        "completed": false,
         "uuid": "8e207954-a2df-4f36-8d1d-6e7e348a2d12"
     }
 ]

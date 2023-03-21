@@ -4,7 +4,7 @@ import { isJson } from './utils';
 
 //Build To-Do Factory
 
-const createToDo = (title, desc, dueDate, priority, uuid = crypto.randomUUID()) => {
+const createToDo = (title, desc, dueDate, priority, completed, uuid = crypto.randomUUID()) => {
 
     function setPriority(level) {
         switch (level.toLowerCase()) {
@@ -24,6 +24,10 @@ const createToDo = (title, desc, dueDate, priority, uuid = crypto.randomUUID()) 
         return console.log(`${this.title} priority is now ${this.priority}.`)
     }
 
+    function changeCompletion() {
+        return this.completed = !this.completed;
+    }
+
     function changeTitle(newTitle) {
         return this.title = newTitle;
     }
@@ -32,9 +36,11 @@ const createToDo = (title, desc, dueDate, priority, uuid = crypto.randomUUID()) 
         uuid,
         title,
         desc,
+        completed,
         dueDate,
         priority,
         setPriority,
+        changeCompletion,
         changeTitle
     }
 }
@@ -42,7 +48,7 @@ const createToDo = (title, desc, dueDate, priority, uuid = crypto.randomUUID()) 
 const importAllToDos = (toDoJsonFile) => {
     const ingestedToDos = isJson(toDoJsonFile) ?
         JSON.parse(toDoJsonFile) : toDoJsonFile;
-    return ingestedToDos.map((toDo) => createToDo(toDo.title, toDo.desc, toDo.dueDate,toDo.priority, toDo.uuid));
+    return ingestedToDos.map((toDo) => createToDo(toDo.title, toDo.desc, toDo.dueDate,toDo.priority, toDo.completed, toDo.uuid));
 }
 
 const generateToDoMap = (toDoList, mapKey) => {

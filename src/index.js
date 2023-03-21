@@ -11,7 +11,11 @@ console.log(toDoData);
 const allToDos = toDo.importAllToDos(toDoData);
 const toDoMap = toDo.generateToDoMap(allToDos, 'uuid');
 
-console.log(toDoMap.get(toDoData[0].uuid));
+console.log(toDoMap.get(allToDos[0].uuid));
+
+allToDos[0].changeCompletion();
+
+console.log(allToDos[0]);
 
 DOM.createHeader();
 DOM.createMainContent();
