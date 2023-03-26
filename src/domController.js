@@ -60,10 +60,14 @@ const createToDo = (toDo, targetContainer) => {
 
     toDoWrapper.classList.add('to-do');
     toDoWrapper.setAttribute('id', toDo.uuid);
+    title.classList.add('title');
     title.innerText = toDo.title;
+    description.classList.add('description');
     description.innerText = toDo.desc;
+    dueDate.classList.add('due-date');
     dueDate.innerText = toDo.dueDate;
-    priority.innerText = toDo.priority
+    priority.classList.add('priority');
+    priority.innerText = toDo.priority;
 
     toDoWrapper.appendChild(title);
     toDoWrapper.appendChild(description);

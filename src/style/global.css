@@ -2,10 +2,16 @@
     font-size: 10px;
     --mint-cream: #f1fffaff;
     --tea-green: #ccfccbff;
+    --tea-green-clear: #ccfccb69;
     --celadon: #96e6b3ff;
     --fern-green: #568259ff;
     --outer-space: #464e47ff;
     color: var(--outer-space);
+    margin: 0;
+    padding: 0;
+}
+
+p {
     margin: 0;
     padding: 0;
 }
@@ -47,4 +53,37 @@ h1 {
     flex: 0 1 20rem;
     text-align: center;
     font-size: 2em;
+}
+
+.main-content {
+    display: grid;
+    margin: 0 auto;
+    width: min(1000px, 95dvw);
+    grid-template-rows: 6dvh;
+    grid-auto-rows: 6dvh;
+    padding: 1em;
+    gap: 0.5em;
+}
+
+.to-do {
+    display: grid;
+    padding: .6rem .3rem;
+    background-color: var(--tea-green-clear);
+    border: 0.2rem solid var(--tea-green);
+    border-radius: 0.5rem;
+    grid-template: 1fr / 2fr 4fr 2fr  1fr;
+}
+
+.to-do > .title {
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+.to-do > .description {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.to-do > .due-date, .priority {
+    font-size: 1.2em;
 }
