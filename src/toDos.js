@@ -1,10 +1,13 @@
 'use strict';
 
 import { isJson } from './utils';
+import { format } from 'date-fns';
 
 //Build To-Do Factory
 
 const createToDo = (title, desc, dueDate, priority, completed, uuid = crypto.randomUUID()) => {
+
+    dueDate = new Date(dueDate);
 
     function setPriority(level) {
         switch (level.toLowerCase()) {

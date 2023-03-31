@@ -3,6 +3,7 @@
 import Check from './images/check-square.svg';
 import Settings from './images/settings.svg';
 import Table from './images/table.svg'
+import { format } from 'date-fns';
 
 const CONTENT = document.querySelector('#content');
 
@@ -65,7 +66,7 @@ const createToDo = (toDo, targetContainer) => {
     description.classList.add('description');
     description.innerText = toDo.desc;
     dueDate.classList.add('due-date');
-    dueDate.innerText = toDo.dueDate;
+    dueDate.innerText = format(toDo.dueDate, 'MM/dd/yyyy');
     priority.classList.add('priority');
     priority.innerText = toDo.priority;
 
