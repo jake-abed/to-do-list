@@ -54,6 +54,8 @@ const createMainContent = () => {
 
 const createToDo = (toDo, targetContainer) => {
     const toDoWrapper = document.createElement('div');
+    const statusLabel = document.createElement('label');
+    const status = document.createElement('input');
     const title = document.createElement('p');
     const description = document.createElement('p');
     const dueDate = document.createElement('p');
@@ -61,6 +63,11 @@ const createToDo = (toDo, targetContainer) => {
 
     toDoWrapper.classList.add('to-do');
     toDoWrapper.setAttribute('id', toDo.uuid);
+    if (toDo.completed) toDoWrapper.classList.add('completed');
+    status.classList.add('status');
+    status.setAttribute('type', 'checkbox');
+    status.setAttribute('id', toDo.uuid + 'status');
+    if (toDo.completed) status.setAttribute('checked', true);
     title.classList.add('title');
     title.innerText = toDo.title;
     description.classList.add('description');
@@ -70,6 +77,7 @@ const createToDo = (toDo, targetContainer) => {
     priority.classList.add('priority');
     priority.innerText = toDo.priority;
 
+    toDoWrapper.appendChild(status);
     toDoWrapper.appendChild(title);
     toDoWrapper.appendChild(description);
     toDoWrapper.appendChild(dueDate);

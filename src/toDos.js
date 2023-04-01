@@ -1,7 +1,6 @@
 'use strict';
 
 import { isJson } from './utils';
-import { format } from 'date-fns';
 
 //Build To-Do Factory
 
