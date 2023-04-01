@@ -71,7 +71,7 @@ h1 {
     background-color: var(--tea-green-clear);
     border: 0.2rem solid var(--tea-green);
     border-radius: 0.5rem;
-    grid-template: 1fr / 2fr 4fr 2fr  1fr;
+    grid-template: 1fr / 1fr 2fr 4fr 2fr  1fr;
 }
 
 .to-do > .title {
