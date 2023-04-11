@@ -52,7 +52,7 @@ const createMainContent = () => {
     return CONTENT.appendChild(SECTION);``
 }
 
-const createToDo = (toDo, targetContainer) => {
+const createToDoDiv = (toDo, targetContainer) => {
     const toDoWrapper = document.createElement('div');
     const statusLabel = document.createElement('label');
     const status = document.createElement('input');
@@ -86,9 +86,86 @@ const createToDo = (toDo, targetContainer) => {
     return targetContainer.appendChild(toDoWrapper);
 }
 
+const createInput = (type, id) => {
+    const INPUT = document.createElement('input');
+    INPUT.setAttribute('id', id);
+    INPUT.setAttribute('type', type);
+    INPUT.setAttribute('name', id);
+    return INPUT;
+}
+
+const createSelect = (id, values) => {
+    const SELECT = document.createElement('select');
+    SELECT.setAttribute('id', id);
+    SELECT.setAttribute('name', id);
+    for (const value of values) {
+        const OPTION = document.createElement('option');
+        OPTION.setAttribute('name', value);
+        OPTION.innerText(value.replace(value[0], value[0].toUpperCase()));
+        SELECT.appendChild(OPTION);
+    };
+    return SELECT;
+}
+
+
+const createLabel = (id, text) => {
+    const LABEL = document.createElement('label');
+    LABEL.setAttribute('for', id);
+    LABEL.innerText(text);
+    return LABEL;
+}
+
+const toDoForm = (toDoData = null) => {
+    const FORM = document.createElement('form');
+    const titleLabel = createLabel('title', 'Task Name');
+    const title = createInput('text', 'title');
+    const descLabel = createLabel('description', 'Description');
+    const desc = createInput('text', 'description');
+    const dueDateLabel = createLabel('due-date', 'Due Date');
+    const dueDate = createInput('date', 'due-date');
+    const priorityLabel = createLabel('priority', 'Priority?');
+    const priority = createSelect('priority', ['low', 'normal', 'high']);
+
+    FORM.appendChild(titleLabel);
+    FORM.appendChild(title);
+    FORM.appendChild(descLabel);
+    FORM.appendChild(desc);
+    FORM.appendChild(dueDateLabel);
+    FORM.appendChild(dueDate);
+    FORM.appendChild(priorityLabel);
+    FORM.appendChild(priority);
+
+    return FORM;
+}
+
+const createToDoModal = (saveFunction) => {
+    const SCREEN = document.createElement('div');
+    const MODAL = document.createElement('div');
+    const H2 = document.createElement('h2');
+    const FORM = toDoForm();
+
+    MODAL.appendChild(H2);
+    MODAL.appendChild(FORM);
+}
+    
+/* in progress
+const editToDoModal = (toDo) => {
+
+}
+*/
+
+const addToDoButton = (saveFunction, targetContainer) => {
+    const BUTTON = document.createElement('div');
+    BUTTON.classList.add('create-to-do');
+    BUTTON.classList.add('button');
+
+    BUTTON.addEventListener('click', () => createToDoModal(saveFunction));
+
+}
+
 export {
     createHeader,
     createMainContent,
     createAppBar,
-    createToDo
+    createToDoDiv
 }

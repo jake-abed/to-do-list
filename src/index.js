@@ -20,5 +20,5 @@ console.log(allToDos[0]);
 DOM.createHeader();
 DOM.createMainContent();
 DOM.createAppBar();
-DOM.createToDo(allToDos[0], document.querySelector('section'));
-DOM.createToDo(allToDos[1], document.querySelector('section'));
+DOM.createToDoDiv(allToDos[0], document.querySelector('section'));
+DOM.createToDoDiv(allToDos[1], document.querySelector('section'));
