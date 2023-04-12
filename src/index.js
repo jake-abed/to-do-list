@@ -22,3 +22,4 @@ DOM.createMainContent();
 DOM.createAppBar();
 DOM.createToDoDiv(allToDos[0], document.querySelector('section'));
 DOM.createToDoDiv(allToDos[1], document.querySelector('section'));
+DOM.addToDoButton(document.querySelector('section'));

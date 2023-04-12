@@ -87,3 +87,33 @@ h1 {
 .to-do > .due-date, .priority {
     font-size: 1.2em;
 }
+
+.button {
+    width: min(100px, 10dvw);
+    height: min(25px, 8dvh);
+    background-color: var(--fern-green);
+    color: var(--mint-cream)
+}
+
+.form-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100dvh;
+    width: 100dvw;
+    background-color: #464e47dd;
+    backdrop-filter: blur(4px);
+}
+
+.modal {
+    position: relative;
+    background-color: var(--celadon);
+    margin: auto auto;
+    width: min(400px, 90%);
+    height: min(600px, 90%);
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+}

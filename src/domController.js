@@ -101,7 +101,7 @@ const createSelect = (id, values) => {
     for (const value of values) {
         const OPTION = document.createElement('option');
         OPTION.setAttribute('name', value);
-        OPTION.innerText(value.replace(value[0], value[0].toUpperCase()));
+        OPTION.innerText = value.replace(value[0], value[0].toUpperCase());
         SELECT.appendChild(OPTION);
     };
     return SELECT;
@@ -111,11 +111,11 @@ const createSelect = (id, values) => {
 const createLabel = (id, text) => {
     const LABEL = document.createElement('label');
     LABEL.setAttribute('for', id);
-    LABEL.innerText(text);
+    LABEL.innerText = text;
     return LABEL;
 }
 
-const toDoForm = (toDoData = null) => {
+const toDoForm = (toDoData = null, submitFunction) => {
     const FORM = document.createElement('form');
     const titleLabel = createLabel('title', 'Task Name');
     const title = createInput('text', 'title');
@@ -125,6 +125,10 @@ const toDoForm = (toDoData = null) => {
     const dueDate = createInput('date', 'due-date');
     const priorityLabel = createLabel('priority', 'Priority?');
     const priority = createSelect('priority', ['low', 'normal', 'high']);
+    const submit = document.createElement('div');
+    submit.classList.add('submit', 'button');
+    submit.addEventListener('click', submitFunction);
+    submit.innerText = 'Create To-Do';
 
     FORM.appendChild(titleLabel);
     FORM.appendChild(title);
@@ -134,18 +138,25 @@ const toDoForm = (toDoData = null) => {
     FORM.appendChild(dueDate);
     FORM.appendChild(priorityLabel);
     FORM.appendChild(priority);
+    FORM.appendChild(submit);
 
     return FORM;
 }
 
-const createToDoModal = (saveFunction) => {
+const createToDoModal = (submitFunction) => {
     const SCREEN = document.createElement('div');
     const MODAL = document.createElement('div');
     const H2 = document.createElement('h2');
-    const FORM = toDoForm();
+    const FORM = toDoForm(submitFunction);
+
+    SCREEN.classList.add('form-background');
+    MODAL.classList.add('modal');
+    H2.innerText = 'Create To-Do';
 
     MODAL.appendChild(H2);
     MODAL.appendChild(FORM);
+    SCREEN.appendChild(MODAL);
+    return document.querySelector('body').appendChild(SCREEN);
 }
     
 /* in progress
@@ -154,18 +165,20 @@ const editToDoModal = (toDo) => {
 }
 */
 
-const addToDoButton = (saveFunction, targetContainer) => {
+const addToDoButton = (targetContainer) => {
     const BUTTON = document.createElement('div');
     BUTTON.classList.add('create-to-do');
     BUTTON.classList.add('button');
 
-    BUTTON.addEventListener('click', () => createToDoModal(saveFunction));
+    BUTTON.addEventListener('click', () => createToDoModal());
 
+    return targetContainer.appendChild(BUTTON);
 }
 
 export {
     createHeader,
     createMainContent,
     createAppBar,
-    createToDoDiv
+    createToDoDiv,
+    addToDoButton
 }
