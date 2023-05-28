@@ -20,6 +20,15 @@ console.log(allToDos[0]);
 DOM.createHeader();
 DOM.createMainContent();
 DOM.createAppBar();
-DOM.createToDoDiv(allToDos[0], document.querySelector('section'));
-DOM.createToDoDiv(allToDos[1], document.querySelector('section'));
+for (const toDo of allToDos){
+    DOM.createToDoDiv(toDo, document.querySelector('section'));
+}
 DOM.addToDoButton(document.querySelector('section'));
+
+const addToDoButton = document.querySelector('#toDoSubmit');
+
+console.log(addToDoButton);
+
+addToDoButton.addEventListener('click', () => {
+    console.log(document.querySelector('#toDoSubmit.desc'))
+});

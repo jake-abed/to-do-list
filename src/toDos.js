@@ -65,6 +65,7 @@ const generateToDoMap = (toDoList, mapKey) => {
 }
 
 export {
+    createToDo,
     importAllToDos,
     generateToDoMap
 }

@@ -94,6 +94,13 @@ const createInput = (type, id) => {
     return INPUT;
 }
 
+const createTextArea = (id) => {
+    const TEXTAREA = document.createElement('textarea');
+    TEXTAREA.setAttribute('id', id);
+    TEXTAREA.setAttribute('name', id);
+    return TEXTAREA;
+}
+
 const createSelect = (id, values) => {
     const SELECT = document.createElement('select');
     SELECT.setAttribute('id', id);
@@ -107,7 +114,6 @@ const createSelect = (id, values) => {
     return SELECT;
 }
 
-
 const createLabel = (id, text) => {
     const LABEL = document.createElement('label');
     LABEL.setAttribute('for', id);
@@ -115,19 +121,19 @@ const createLabel = (id, text) => {
     return LABEL;
 }
 
-const toDoForm = (toDoData = null, submitFunction) => {
+const toDoForm = (toDoData = null) => {
     const FORM = document.createElement('form');
     const titleLabel = createLabel('title', 'Task Name');
     const title = createInput('text', 'title');
     const descLabel = createLabel('description', 'Description');
-    const desc = createInput('text', 'description');
+    const desc = createTextArea('description');
     const dueDateLabel = createLabel('due-date', 'Due Date');
     const dueDate = createInput('date', 'due-date');
     const priorityLabel = createLabel('priority', 'Priority?');
     const priority = createSelect('priority', ['low', 'normal', 'high']);
     const submit = document.createElement('div');
     submit.classList.add('submit', 'button');
-    submit.addEventListener('click', submitFunction);
+    submit.setAttribute('id', 'toDoSubmit');
     submit.innerText = 'Create To-Do';
 
     FORM.appendChild(titleLabel);
@@ -143,11 +149,11 @@ const toDoForm = (toDoData = null, submitFunction) => {
     return FORM;
 }
 
-const createToDoModal = (submitFunction) => {
+const createToDoModal = () => {
     const SCREEN = document.createElement('div');
     const MODAL = document.createElement('div');
     const H2 = document.createElement('h2');
-    const FORM = toDoForm(submitFunction);
+    const FORM = toDoForm();
 
     SCREEN.classList.add('form-background');
     MODAL.classList.add('modal');
@@ -169,6 +175,7 @@ const addToDoButton = (targetContainer) => {
     const BUTTON = document.createElement('div');
     BUTTON.classList.add('create-to-do');
     BUTTON.classList.add('button');
+    BUTTON.innerText = 'Add To-Do'
 
     BUTTON.addEventListener('click', () => createToDoModal());
 
