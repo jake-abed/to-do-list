@@ -24,11 +24,4 @@ for (const toDo of allToDos){
     DOM.createToDoDiv(toDo, document.querySelector('section'));
 }
 DOM.addToDoButton(document.querySelector('section'));
-
-const addToDoButton = document.querySelector('#toDoSubmit');
-
-console.log(addToDoButton);
-
-addToDoButton.addEventListener('click', () => {
-    console.log(document.querySelector('#toDoSubmit.desc'))
-});
+DOM.createToDoModal();

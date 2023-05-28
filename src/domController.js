@@ -149,6 +149,12 @@ const toDoForm = (toDoData = null) => {
     return FORM;
 }
 
+const swapToDoModal = () => {
+    const modal = document.querySelector('.form-background');
+    (modal.style.display === 'none') ? modal.style.display = 'block' : modal.style.display = 'none';
+    return
+}
+
 const createToDoModal = () => {
     const SCREEN = document.createElement('div');
     const MODAL = document.createElement('div');
@@ -162,6 +168,11 @@ const createToDoModal = () => {
     MODAL.appendChild(H2);
     MODAL.appendChild(FORM);
     SCREEN.appendChild(MODAL);
+    SCREEN.style.display = 'none';
+    SCREEN.addEventListener('click', swapToDoModal);
+    MODAL.addEventListener('click', (e) => {
+        e.stopPropagation();
+    })
     return document.querySelector('body').appendChild(SCREEN);
 }
     
@@ -177,7 +188,7 @@ const addToDoButton = (targetContainer) => {
     BUTTON.classList.add('button');
     BUTTON.innerText = 'Add To-Do'
 
-    BUTTON.addEventListener('click', () => createToDoModal());
+    BUTTON.addEventListener('click', () => swapToDoModal());
 
     return targetContainer.appendChild(BUTTON);
 }
@@ -187,5 +198,6 @@ export {
     createMainContent,
     createAppBar,
     createToDoDiv,
+    createToDoModal,
     addToDoButton
 }

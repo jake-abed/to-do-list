@@ -111,9 +111,11 @@ h1 {
     margin: auto auto;
     width: min(400px, 90%);
     height: min(600px, 90%);
+    z-index: 2
 }
 
 .modal form {
     display: flex;
     flex-direction: column;
+    z-index: 3;
 }
