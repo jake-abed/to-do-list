@@ -21,7 +21,7 @@ DOM.createHeader();
 DOM.createMainContent();
 DOM.createAppBar();
 for (const toDo of allToDos){
-    DOM.createToDoDiv(toDo, document.querySelector('section'));
+    DOM.createToDoDiv(toDo, document.querySelector('.todos-wrapper'));
 }
 DOM.addToDoButton(document.querySelector('section'));
 DOM.createToDoModal();
@@ -35,8 +35,7 @@ toDoSubmit.addEventListener('click', () => {
         let priority = document.querySelector('#priority').value;
         allToDos.push(toDo.createToDo(title, desc, dueDate, priority));
         DOM.clearAddToDoModal();
-        DOM.createToDoDiv(allToDos[allToDos.length - 1], document.querySelector('section'));
-        
+        DOM.createToDoDiv(allToDos[allToDos.length - 1], document.querySelector('.todos-wrapper'));
         DOM.swapToDoModal();
     }
 })

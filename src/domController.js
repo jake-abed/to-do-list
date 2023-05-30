@@ -46,10 +46,13 @@ const createAppBar = () => {
 
 const createMainContent = () => {
     const SECTION = document.createElement('section');
+    const TODOS = document.createElement('div');
     
     SECTION.classList.add('main-content');
+    TODOS.classList.add('todos-wrapper');
+    SECTION.appendChild(TODOS);
 
-    return CONTENT.appendChild(SECTION);``
+    return CONTENT.appendChild(SECTION);
 }
 
 const createToDoDiv = (toDo, targetContainer) => {
