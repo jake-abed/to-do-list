@@ -25,3 +25,8 @@ for (const toDo of allToDos){
 }
 DOM.addToDoButton(document.querySelector('section'));
 DOM.createToDoModal();
+
+const toDoSubmit = document.querySelector('#toDoSubmit');
+toDoSubmit.addEventListener('click', () => {
+    console.log(DOM.validateToDoFields());
+})

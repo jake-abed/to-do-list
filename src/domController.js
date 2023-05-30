@@ -193,11 +193,24 @@ const addToDoButton = (targetContainer) => {
     return targetContainer.appendChild(BUTTON);
 }
 
+const validateToDoFields = () => {
+    let title = document.querySelector('#title');
+    let desc = document.querySelector('#description');
+    let dueDate = document.querySelector('#due-date');
+    let priority = document.querySelector('#priority');
+
+    if (!title || !desc || !dueDate || !priority) return false;
+    if (title.value === '') return false;
+    if (!dueDate.value) return false;
+    else return true;
+}
+
 export {
     createHeader,
     createMainContent,
     createAppBar,
     createToDoDiv,
     createToDoModal,
-    addToDoButton
+    addToDoButton,
+    validateToDoFields
 }
