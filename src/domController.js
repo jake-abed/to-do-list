@@ -205,6 +205,21 @@ const validateToDoFields = () => {
     else return true;
 }
 
+const clearAddToDoModal = () => {
+    let title = document.querySelector('#title');
+    let desc = document.querySelector('#description');
+    let dueDate = document.querySelector('#due-date');
+    let priority = document.querySelector('#priority');
+
+    title.value = '';
+    desc.value = '';
+    dueDate.value = null;
+    priority.value = 'Low';
+
+    console.log(title);
+    return console.log('Modal reset');
+}
+
 export {
     createHeader,
     createMainContent,
@@ -212,5 +227,7 @@ export {
     createToDoDiv,
     createToDoModal,
     addToDoButton,
-    validateToDoFields
+    swapToDoModal,
+    validateToDoFields,
+    clearAddToDoModal
 }

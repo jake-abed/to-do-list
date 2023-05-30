@@ -28,5 +28,15 @@ DOM.createToDoModal();
 
 const toDoSubmit = document.querySelector('#toDoSubmit');
 toDoSubmit.addEventListener('click', () => {
-    console.log(DOM.validateToDoFields());
+    if (DOM.validateToDoFields()) {
+        let title = document.querySelector('#title').value;
+        let desc = document.querySelector('#description').value;
+        let dueDate = document.querySelector('#due-date').value;
+        let priority = document.querySelector('#priority').value;
+        allToDos.push(toDo.createToDo(title, desc, dueDate, priority));
+        DOM.clearAddToDoModal();
+        DOM.createToDoDiv(allToDos[allToDos.length - 1], document.querySelector('section'));
+        
+        DOM.swapToDoModal();
+    }
 })
