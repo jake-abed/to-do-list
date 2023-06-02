@@ -59,8 +59,6 @@ h1 {
     display: grid;
     margin: 0 auto;
     width: min(1000px, 95dvw);
-    grid-template-rows: 6dvh;
-    grid-auto-rows: 6dvh;
     padding: 1em;
     gap: 0.5em;
 }
@@ -92,7 +90,18 @@ h1 {
     width: min(100px, 10dvw);
     height: min(25px, 8dvh);
     background-color: var(--fern-green);
-    color: var(--mint-cream)
+    color: var(--mint-cream);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-to-do {
+    font-weight: 600;
+    font-size: large;
+    padding: 0.75rem;
+    cursor: pointer;
 }
 
 .form-background {
@@ -109,6 +118,7 @@ h1 {
     position: relative;
     background-color: var(--celadon);
     margin: auto auto;
+    padding: 0.2rem 1rem;
     width: min(400px, 90%);
     height: min(600px, 90%);
     z-index: 2
