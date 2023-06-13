@@ -2,7 +2,8 @@
 
 import Check from './images/check-square.svg';
 import Settings from './images/settings.svg';
-import Table from './images/table.svg'
+import Table from './images/table.svg';
+import Trash from './images/trash-2.svg';
 import { format } from 'date-fns';
 
 const CONTENT = document.querySelector('#content');
@@ -63,6 +64,8 @@ const createToDoDiv = (toDo, targetContainer) => {
     const description = document.createElement('p');
     const dueDate = document.createElement('p');
     const priority = document.createElement('div');
+    const deleteIcon = new Image();
+    deleteIcon.src = Trash;
 
     toDoWrapper.classList.add('to-do');
     toDoWrapper.setAttribute('id', toDo.uuid);
@@ -85,6 +88,7 @@ const createToDoDiv = (toDo, targetContainer) => {
     toDoWrapper.appendChild(description);
     toDoWrapper.appendChild(dueDate);
     toDoWrapper.appendChild(priority);
+    toDoWrapper.appendChild(deleteIcon);
 
     return targetContainer.appendChild(toDoWrapper);
 }
