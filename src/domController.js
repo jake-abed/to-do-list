@@ -67,8 +67,8 @@ const createToDoDiv = (toDo, targetContainer) => {
     const deleteIcon = new Image();
     deleteIcon.src = Trash;
 
-    toDoWrapper.classList.add('to-do');
-    toDoWrapper.setAttribute('id', toDo.uuid);
+    toDoWrapper.classList.add('to-do', toDo.uuid);
+    toDoWrapper.setAttribute('id', 'uuid' + toDo.uuid);
     if (toDo.completed) toDoWrapper.classList.add('completed');
     status.classList.add('status');
     status.setAttribute('type', 'checkbox');
@@ -82,6 +82,10 @@ const createToDoDiv = (toDo, targetContainer) => {
     dueDate.innerText = format(toDo.dueDate, 'MM/dd/yyyy');
     priority.classList.add('priority');
     priority.innerText = toDo.priority;
+    deleteIcon.setAttribute('data-uuid', toDo.uuid)
+    deleteIcon.addEventListener('click', (e) => {
+        deleteToDoDiv(e.target);
+    });
 
     toDoWrapper.appendChild(status);
     toDoWrapper.appendChild(title);
@@ -225,6 +229,11 @@ const clearAddToDoModal = () => {
 
     console.log(title);
     return console.log('Modal reset');
+}
+
+const deleteToDoDiv = (element) => {
+    const uuid = element.getAttribute('data-uuid');
+    document.querySelector('#uuid' + uuid).remove();
 }
 
 export {
