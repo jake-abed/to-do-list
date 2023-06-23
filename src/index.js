@@ -11,17 +11,11 @@ console.log(toDoData);
 const allToDos = toDo.importAllToDos(toDoData);
 const toDoMap = toDo.generateToDoMap(allToDos, 'uuid');
 
-console.log(toDoMap.get(allToDos[0].uuid));
-
-allToDos[0].changeCompletion();
-
-console.log(allToDos[0]);
-
 DOM.createHeader();
 DOM.createMainContent();
 DOM.createAppBar();
-for (const toDo of allToDos){
-    DOM.createToDoDiv(toDo, document.querySelector('.todos-wrapper'));
+for (const [_key, value] of toDoMap){
+    DOM.createToDoDiv(value, document.querySelector('.todos-wrapper'));
 }
 DOM.addToDoButton(document.querySelector('section'));
 DOM.createToDoModal();
@@ -29,13 +23,14 @@ DOM.createToDoModal();
 const toDoSubmit = document.querySelector('#toDoSubmit');
 toDoSubmit.addEventListener('click', () => {
     if (DOM.validateToDoFields()) {
-        let title = document.querySelector('#title').value;
-        let desc = document.querySelector('#description').value;
-        let dueDate = document.querySelector('#due-date').value;
-        let priority = document.querySelector('#priority').value;
-        allToDos.push(toDo.createToDo(title, desc, dueDate, priority));
-        DOM.clearAddToDoModal();
+        const title = document.querySelector('#title').value;
+        const desc = document.querySelector('#description').value;
+        const dueDate = document.querySelector('#due-date').value;
+        const priority = document.querySelector('#priority').value;
+        const uuid = crypto.randomUUID();
+        allToDos.push(toDo.createToDo(title, desc, dueDate, priority, uuid));
+        DOM.clearAddToDoModal();r
         DOM.createToDoDiv(allToDos[allToDos.length - 1], document.querySelector('.todos-wrapper'));
         DOM.swapToDoModal();
     }
-})
+});
