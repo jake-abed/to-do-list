@@ -49,7 +49,7 @@ const createToDo = (title, desc, dueDate, priority, completed, uuid = crypto.ran
 const importAllToDos = (toDoJsonFile) => {
     const ingestedToDos = isJson(toDoJsonFile) ?
         JSON.parse(toDoJsonFile) : toDoJsonFile;
-    return ingestedToDos.map((toDo) => createToDo(toDo.title, toDo.desc, toDo.dueDate,toDo.priority, toDo.completed, toDo.uuid));
+    return ingestedToDos[0]['all'].map((toDo) => createToDo(toDo.title, toDo.desc, toDo.dueDate,toDo.priority, toDo.completed, toDo.uuid));
 }
 
 /*
