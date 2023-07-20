@@ -52,10 +52,6 @@ const importAllToDos = (toDoJsonFile) => {
     return ingestedToDos[0]['all'].map((toDo) => createToDo(toDo.title, toDo.desc, toDo.dueDate,toDo.priority, toDo.completed, toDo.uuid));
 }
 
-/*
-Not sure this is necessary. Review for removal.
-*/
-
 const generateToDoMap = (toDoList, mapKey) => {
     const toDoMap = new Map();
     for (const toDo of toDoList) {
